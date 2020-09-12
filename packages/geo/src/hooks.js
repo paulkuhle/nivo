@@ -38,6 +38,7 @@ export const projectionById = {
     mercator: geoMercator,
     transverseMercator: geoTransverseMercator,
     naturalEarth1: geoNaturalEarth1,
+    albersUsa: geoAlbersUsa,
 }
 
 export const useGeoMap = ({
@@ -47,6 +48,7 @@ export const useGeoMap = ({
     projectionScale,
     projectionTranslation,
     projectionRotation,
+    projectionCenter,
     fillColor,
     borderWidth,
     borderColor,
@@ -56,6 +58,7 @@ export const useGeoMap = ({
             .scale(projectionScale)
             .translate([width * projectionTranslation[0], height * projectionTranslation[1]])
             .rotate(projectionRotation)
+            .ceter(projectionCenter)
     }, [
         width,
         height,
@@ -63,6 +66,8 @@ export const useGeoMap = ({
         projectionScale,
         projectionTranslation[0],
         projectionTranslation[1],
+        projectionCenter[0],
+        projectionCenter[1],
         projectionRotation[0],
         projectionRotation[1],
         projectionRotation[2],
