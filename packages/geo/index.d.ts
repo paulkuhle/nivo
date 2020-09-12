@@ -17,6 +17,7 @@ declare module '@nivo/geo' {
         | 'mercator'
         | 'transverseMercator'
         | 'naturalEarth1'
+        | 'albersUsa'
 
     type FeatureAccessor<F, T> = (feature: F) => T
 
@@ -28,6 +29,7 @@ declare module '@nivo/geo' {
         projectionType?: GeoProjectionType
         projectionScale?: number
         projectionTranslation?: [number, number]
+        projectionCenter?: [number, number]
         projectionRotation?: [number, number, number]
 
         enableGraticule?: boolean
