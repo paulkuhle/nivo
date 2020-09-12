@@ -69,6 +69,7 @@
     "react-dom": "16.8.6"
   },
   "scripts": {
+    "prepare": "npm i && make packages-build",
     "changelog": "rm CHANGELOG.md && node scripts/generate-changelog.js"
   },
   "workspaces": [
